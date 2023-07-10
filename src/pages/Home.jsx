@@ -1,12 +1,13 @@
-import React from 'react'
-import {Navbar} from '../containers'
+import React from "react";
+import { Carousel, Navbar } from "../containers";
 
 const Home = () => {
   return (
     <div>
       <Navbar />
+      <Carousel />
     </div>
-  )
-}
+  );
+};
 
-export default Home
+export default Home;

@@ -10,7 +10,7 @@ const Navbar = () => {
   return (
     <div className="h-[60px] flex flex-col font-urbanist">
       <Announcement />
-      <nav className="p-3 flex">
+      <nav className="px-3 py-1 flex">
         {/* Input */}
         <div className="hidden md:flex items-center w-1/3">
           <span className="mr-5">EN</span>
@@ -48,7 +48,7 @@ const Navbar = () => {
 
         {/* RESPONSIVE MENU */}
         {toggleMenu && (
-          <div className="fixed flex flex-col justify-evenly items-center right-10 top-20 bg-aqua text-white w-1/2 h-1/4 rounded-lg ">
+          <div className="absolute flex flex-col justify-evenly items-center right-10 top-20 bg-aqua text-white w-1/2 h-1/4 rounded-lg z-20">
             <a href="#" className="text-sm">
               REGISTER
             </a>
