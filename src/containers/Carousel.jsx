@@ -18,7 +18,7 @@ const Carousel = () => {
           <img src={item.image} className="w-60 sm:w-auto" alt="carousel-image" />
 
           <div className="flex flex-col text-center">
-            <h2 className="text-4xl font-bold ">{item.title}</h2>
+            <h2 className="text-4xl font-bold uppercase">{item.title}</h2>
             <p
               className="font-semibold text-white tracking-wide"
               style={{ color: item.color }}
