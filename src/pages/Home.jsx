@@ -1,10 +1,11 @@
 import React from "react";
-import { Carousel, Navbar, Categories, Products } from "../containers";
-import { Footer, Newsletter } from "../components";
+import { Carousel, Categories, Products } from "../containers";
+import { Footer, Newsletter, Navbar, Announcement } from "../components";
 
 const Home = () => {
   return (
     <div>
+      <Announcement />
       <Navbar />
       <Carousel />
       <Categories />

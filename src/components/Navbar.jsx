@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Announcement, Badge } from "../components";
+import { Badge } from ".";
 import { FcSearch } from "react-icons/fc";
 import { BsFillCartFill } from "react-icons/bs";
 import { AiOutlineMenu } from "react-icons/ai";
@@ -9,8 +9,7 @@ const Navbar = () => {
 
   return (
     <div className="h-[60px] flex flex-col font-urbanist">
-      <Announcement />
-      <nav className="px-3 py-1 flex">
+      <nav className="px-3 py-1 flex h-full items-center">
         {/* Input */}
         <div className="hidden md:flex items-center w-1/3">
           <span className="mr-5">EN</span>
