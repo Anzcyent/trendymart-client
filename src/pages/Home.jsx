@@ -1,6 +1,6 @@
 import React from "react";
 import { Carousel, Navbar, Categories, Products } from "../containers";
-import { Newsletter } from "../components";
+import { Footer, Newsletter } from "../components";
 
 const Home = () => {
   return (
@@ -10,6 +10,7 @@ const Home = () => {
       <Categories />
       <Products />
       <Newsletter />
+      <Footer />
     </div>
   );
 };
