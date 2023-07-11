@@ -13,6 +13,7 @@ export default {
       aqua: "#028082",
       black: "#000",
       white: "#fff",
+      beige: "#e0d9da"
     },
     screens: {
       ss: "340px",
