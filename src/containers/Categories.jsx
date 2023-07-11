@@ -4,7 +4,7 @@ import categoryConstants from "../utils/category/categoryConstants";
 
 const Categories = () => {
   return (
-    <div className="flex w-full flex-col sm:flex-row justify-evenly mt-3 p-3">
+    <div className="flex w-full flex-col lg:flex-row justify-evenly mt-3 p-3">
       {categoryConstants.map((category, i) => (
         <Category
           key={"category" + i}
