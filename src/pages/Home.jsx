@@ -1,5 +1,5 @@
 import React from "react";
-import { Carousel, Navbar, Categories } from "../containers";
+import { Carousel, Navbar, Categories, Products } from "../containers";
 
 const Home = () => {
   return (
@@ -7,6 +7,7 @@ const Home = () => {
       <Navbar />
       <Carousel />
       <Categories />
+      <Products />
     </div>
   );
 };
