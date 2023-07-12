@@ -2,7 +2,12 @@
 export default {
   content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
   theme: {
-    extend: {},
+    extend: {
+      backgroundImage: {
+        'register': "url('/assets/login-register/register.jpg')",
+        'login': "url('/assets/login-register/login.jpg')"
+      }
+    },
     fontFamily: {
       urbanist: ["Urbanist", "sans-serif"],
     },
