@@ -63,7 +63,7 @@ const Register = () => {
 
           <p className="p-2 sm:text-base text-sm">By creating an account I consent to the processing of my personal data in accordance with the <span className="font-bold">PRIVACY POLICY</span>.</p>
 
-          <button type="submit" className="border sm:w-auto w-full sm:mx-2 mx-0 px-3 py-1 font-bold text-[#1f061b] hover:bg-[#1f061b] hover:text-white active:scale-95">CREATE</button>
+          <button type="submit" className="border sm:w-auto w-full sm:mx-2 mx-0 px-3 py-1 font-bold text-white bg-[#1f061b] hover:bg-white hover:text-[#1f061b] active:scale-95">CREATE</button>
         </form>
       </div>
     </div>
