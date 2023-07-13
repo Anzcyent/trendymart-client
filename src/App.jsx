@@ -1,10 +1,10 @@
 import React from "react";
 import "./App.css"
-import { Home, ProductList, Product, Register, Login } from "./pages";
+import { Home, ProductList, Product, Register, Login, Cart } from "./pages";
 
 
 const App = () => {
-  return <Login />;
+  return <Cart />;
 };
 
 export default App;

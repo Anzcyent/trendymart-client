@@ -6,3 +6,5 @@ export { default as Newsletter } from "./Newsletter";
 export { default as Footer } from "./Footer";
 export { default as Navbar } from "./Navbar";
 export { default as Filter } from "./Filter";
+export { default as CartItem } from "./CartItem";
+export { default as CartSummary } from "./CartSummary";
