@@ -11,6 +11,7 @@ const Categories = () => {
           name={category.name}
           image={category.image}
           color={category.color}
+          category={category.category}
         />
       ))}
     </div>
