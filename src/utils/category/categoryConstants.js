@@ -3,7 +3,7 @@ const categoryConstants = [
     name: "Shirt Style",
     image: "/assets/categories/shirt-style.jpg",
     color: "#f3f3f3",
-    category: "women",
+    category: "tshirt",
   },
   {
     name: "Loungewear Love",
@@ -15,7 +15,7 @@ const categoryConstants = [
     name: "Light Jackets",
     image: "/assets/categories/light-jackets.jpg",
     color: "#fff",
-    category: "jeans",
+    category: "jackets",
   },
 ];
 
