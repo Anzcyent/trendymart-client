@@ -3,9 +3,11 @@ import { Badge } from ".";
 import { FcSearch } from "react-icons/fc";
 import { BsFillCartFill } from "react-icons/bs";
 import { AiOutlineMenu } from "react-icons/ai";
+import { useSelector } from "react-redux";
 
 const Navbar = () => {
   const [toggleMenu, setToggleMenu] = useState(false);
+  const {quantity} = useSelector(state => state.cart);
 
   return (
     <div className="h-[60px] flex flex-col font-urbanist">
@@ -36,7 +38,7 @@ const Navbar = () => {
 
           <a href="#" className="text-lg relative">
             <BsFillCartFill />
-            <Badge>5</Badge>
+            <Badge>{quantity}</Badge>
           </a>
         </div>
 

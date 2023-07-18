@@ -1,16 +1,25 @@
 import React, { useState } from "react";
+import { addProduct } from "../redux/cartRedux";
+import { useDispatch } from "react-redux";
 
 const ProductDetails = ({ product }) => {
   const [quantity, setQuantity] = useState(1);
   const [color, setColor] = useState("");
   const [size, setSize] = useState("");
 
+  const dispatch = useDispatch();
   const handleQuantity = (type) => {
     if (type === "dec") {
       quantity > 1 && setQuantity(quantity - 1);
     } else {
       setQuantity(quantity + 1);
     }
+  };
+
+  const handleClick = () => {
+    color !== "" &&
+      size !== "" &&
+      dispatch(addProduct({ ...product, quantity, color, size }));
   };
 
   return (
@@ -32,17 +41,23 @@ const ProductDetails = ({ product }) => {
         </span>
         {/* COLOR AND SIZE*/}
         <div className="flex my-5">
-          <div className="flex items-center">
-            <span className="sm:text-2xl text-lg mr-3">Color</span>
+          <div className="flex sm:flex-row flex-col items-center">
+            <span className="sm:text-2xl text-lg mr-3">Colors</span>
             {/* Burayı renk miktarı kadar map edeceksin ve dinamik background ekleyeceksin */}
             {product?.color?.map((color) => (
               <span
                 key={color}
-                className={`rounded-full w-5 h-5 mx-1`}
+                className="rounded-full w-5 h-5 mx-1 cursor-pointer hover:opacity-70"
                 style={{ backgroundColor: color }}
                 onClick={() => setColor(color)}
               ></span>
             ))}
+
+            {color !== "" && (
+              <span className="sm:self-center">
+                Selected color is <span style={{ color }}>{color}</span>
+              </span>
+            )}
           </div>
 
           <div className="flex mx-5">
@@ -89,6 +104,7 @@ const ProductDetails = ({ product }) => {
           <button
             type="button"
             className="sm:text-base text-sm flex justify-center items-center border-2 border-aqua font-semibold hover:opacity-80 hover:bg-aqua hover:text-white active:scale-95 px-3 mx-5"
+            onClick={handleClick}
           >
             ADD TO CART
           </button>
