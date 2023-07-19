@@ -1,8 +1,11 @@
 import React from "react";
 
 import { CartItem, CartSummary } from "../components";
+import { useSelector } from "react-redux";
 
 const CartSection = () => {
+  const cart = useSelector((state) => state.cart);
+
   return (
     <div className="font-urbanist p-3 w-full">
       <h1 className="text-center sm:text-2xl text-lg font-bold">YOUR CART</h1>
@@ -32,15 +35,11 @@ const CartSection = () => {
       <div className="flex sm:flex-row flex-col justify-around items-center">
         {/* PRODUCTS */}
         <div className="flex flex-col sm:w-2/3 w-full">
-          {/* PRODUCT */}
-          <CartItem />
-          <div className="sm:w-5/6 w-full h-[1px] bg-black mt-5"></div>
-          {/* PRODUCT */}
-          <CartItem />
+          {cart.products.map(product => <CartItem key={product._id} product={product} />)}
         </div>
 
         {/* SUMMARY */}
-        <CartSummary />
+        <CartSummary cart={cart} />
       </div>
     </div>
   );

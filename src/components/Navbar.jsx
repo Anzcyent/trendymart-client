@@ -4,6 +4,7 @@ import { FcSearch } from "react-icons/fc";
 import { BsFillCartFill } from "react-icons/bs";
 import { AiOutlineMenu } from "react-icons/ai";
 import { useSelector } from "react-redux";
+import { Link } from "react-router-dom";
 
 const Navbar = () => {
   const [toggleMenu, setToggleMenu] = useState(false);
@@ -23,23 +24,23 @@ const Navbar = () => {
         </div>
 
         {/* LOGO */}
-        <div className="w-2/3 md:w-1/3 flex justify-center items-center">
+        <Link to="/" className="w-2/3 md:w-1/3 flex justify-center items-center">
           <legend className="font-bold md:text-4xl text-2xl">TrendyMart</legend>
-        </div>
+        </Link>
 
         {/* MENU */}
         <div className="hidden md:flex w-1/3 flex justify-end items-center">
-          <a href="#" className="mr-4 text-sm">
+          <Link to="#" className="mr-4 text-sm">
             REGISTER
-          </a>
-          <a href="#" className="mr-4 text-sm">
+          </Link>
+          <Link to="#" className="mr-4 text-sm">
             SIGN IN
-          </a>
+          </Link>
 
-          <a href="#" className="text-lg relative">
+          <Link to="/cart" className="text-lg relative">
             <BsFillCartFill />
             <Badge>{quantity}</Badge>
-          </a>
+          </Link>
         </div>
 
         {/* MENU BUTTON */}
@@ -50,17 +51,17 @@ const Navbar = () => {
         {/* RESPONSIVE MENU */}
         {toggleMenu && (
           <div className="absolute flex flex-col justify-evenly items-center right-10 top-20 bg-aqua text-white w-1/2 h-1/4 rounded-lg z-20">
-            <a href="#" className="text-sm">
+            <Link to="#" className="text-sm">
               REGISTER
-            </a>
-            <a href="#" className="text-sm">
+            </Link>
+            <Link to="#" className="text-sm">
               SIGN IN
-            </a>
+            </Link>
 
-            <a href="#" className="text-lg relative">
+            <Link to="/cart" className="text-lg relative">
               <BsFillCartFill />
-              <Badge>5</Badge>
-            </a>
+              <Badge>{quantity}</Badge>
+            </Link>
           </div>
         )}
       </nav>
