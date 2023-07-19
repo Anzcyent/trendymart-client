@@ -3,6 +3,9 @@ import React from "react";
 import { CartItem, CartSummary } from "../components";
 import { useSelector } from "react-redux";
 import { useNavigate } from "react-router-dom";
+import StripeCheckOut from "react-stripe-checkout";
+
+const KEY = process.env.REACT_APP_STRIPE;
 
 const CartSection = () => {
   const cart = useSelector((state) => state.cart);
@@ -44,7 +47,7 @@ const CartSection = () => {
         </div>
 
         {/* SUMMARY */}
-        <CartSummary cart={cart} />
+        <CartSummary cart={cart} StripeCheckOut={StripeCheckOut} KEY={KEY} />
       </div>
     </div>
   );
