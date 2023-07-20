@@ -8,6 +8,7 @@ export default defineConfig({
     "process.env": {
       REACT_APP_STRIPE:
         "pk_test_51NUTNoHBvpeGrdzgigkOVnUi6rg8IzthW3dwQgEYsWClcRFi9W2LEUMGRiawA7G8YqU3eNxeoA6uqAKjg3D57Mmk00nfsfHDWO", // it is public key so no need to hide it
+      NODE_ENV: "development"
     },
   },
 });
