@@ -17,8 +17,11 @@ const ProductDetails = ({ product }) => {
   };
 
   const handleClick = () => {
-    color !== "" &&
-      size !== "" &&
+    if (color === "" || size === "") {
+      alert("You must select a color and size.");
+    }
+
+    (color !== "" || size !== "") &&
       dispatch(addProduct({ ...product, quantity, color, size }));
   };
 
